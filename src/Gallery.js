@@ -9,29 +9,37 @@ class ListGallery extends Component {
         this.state = {
             resto: [
                 {
-                    nama: "Warung Woles",
-                    kategori: "Ayam Goreng • $$",
-                    bintang: "5"
+                    nama: "Warung Ayam",
+                    kategori: "Chicken",
+                    harga: "$$$$",
+                    bintang: "5",
+                    status: "Open Now"
                 },
                 {
                     nama: "Warung Ikan",
-                    kategori: "Seafood • $$",
-                    bintang: "4"
+                    kategori: "Seafood",
+                    bintang: "$$$",
+                    status: "Open Now"
                 },
                 {
-                    isbn: "54321", judul: "Bumi", penulis: "Tere Liye",
-                    penerbit: "CV Nusa Bangsa", harga: 70000,
-                    cover: "https://drive.google.com/uc?id=1e-thvq7lkG1_gw0FqHzRoiAhfhdgpOUj"
+                    nama: "Streetfood",
+                    kategori: "Streetfood",
+                    harga: "$",
+                    bintang: "$$",
+                    status: "Open Now"
+                },
+                {
+                    nama: "Streetfood",
+                    kategori: "Streetfood",
+                    harga: "$",
+                    bintang: "$$",
+                    status: "Open Now"
                 },
             ],
-            action: "",
-            isbn: "",
-            judul: "",
-            penulis: "",
-            penerbit: "",
-            harga: 0,
-            cover: "",
-            selectedItem: null,
+            nama: "",
+            kategori: "",
+            bintang: "",
+            status: ""
         }
     }
     render() {
@@ -39,16 +47,12 @@ class ListGallery extends Component {
             <div className="container">
                 
                 <div className="row">
-                    {this.state.buku.map((item, index) => (
+                    {this.state.resto.map((item, index) => (
                         <Kartu
                             nama={item.nama}
-                            isbn={item.isbn}
-                            penulis={item.penulis}
-                            penerbit={item.penerbit}
-                            harga={item.harga}
-                            cover={item.cover}
-                            onEdit={() => this.Edit(item)}
-                            onDrop={() => this.Drop(item)}
+                            kategori={item.kategori}
+                            bintang={item.bintang}
+                            status={item.status}
                         />
                     ))}
                 </div>

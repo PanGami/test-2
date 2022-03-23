@@ -5,31 +5,31 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Container, Card, Button } 
 class Kartu extends React.Component {
     render() {
         return (
-            <div className="col-lg-6 col-sm-12 p-2">
+            <div className="col-4">
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1024px-Black_flag.svg.png" />
                     <Card.Body>
+                        <div>
                         <Card.Title>{this.props.nama}</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
+                        <Card.Text>{this.props.kategori}</Card.Text>
+                        <Card.Text>{this.props.harga}</Card.Text>
+                        <Card.Text>{this.props.bintang}</Card.Text>
+                        <Card.Text>{this.props.status}</Card.Text>
+                        </div>
                     </Card.Body>
                     <Button>Learn More</Button>
-                </Card>
 
-                <div className="card">
+                </Card>
+                {/* <div className="card">
                     <div className="card-body row">
-                        {/* menampilkan Gambar / cover */}
                         <div className="col-5">
                             <img src={this.props.cover} className="img"
                                 height="200" />
                         </div>
 
-                        {/* menampilkan deskripsi */}
                         <div className="col-7">
                             <h5 className="text-info">
-                                {this.props.judul}
+                                {this.props.nama}
                             </h5>
                             <h6 className="text-dark">
                                 ISBN : {this.props.isbn}
@@ -44,20 +44,18 @@ class Kartu extends React.Component {
                                 Harga: Rp {this.props.harga}
                             </h6>
 
-                            {/* button untuk mengedit */}
                             <button className="btn btn-sm btn-primary m-1"
                                 onClick={this.props.onEdit}>
                                 Edit
                             </button>
 
-                            {/* button untuk menghapus */}
                             <button className="btn btn-sm btn-danger m-1"
                                 onClick={this.props.onDrop}>
                                 Hapus
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         )

@@ -12,9 +12,7 @@ import './App.css';
 
 const Utama = () => (
     <Routes>
-        <Route exact path="/" element={<Test/>}/>
-        
-        <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/gallery" element={<Gallery/>}/>
     </Routes>
 )
 
